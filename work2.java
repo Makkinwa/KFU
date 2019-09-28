@@ -59,18 +59,24 @@ public class Runner {
         if (x+y<z | y+z<x | z+x<y ){
             System.out.println("Такой треугольник существовать не может");
         }
-        else System.out.println("Такой треугольник может сущуствовать");
-        
-        if(x==y & x==z){
-            System.out.println("Равносторонний треугольник");
-        }
         else {
-            if ( (x == y & x != z) | (z == x & z !=y) | (z == y & z != x) ){
-                System.out.println("Треугольник равнобедренный");
+            System.out.println("Такой треугольник может сущуствовать");
+            if(( x == (int)Math.sqrt(y*y + z*z) ) | (y == (int)Math.sqrt(x*x + z*z)) | (z == (int)Math.sqrt(x*x + y*y)) ){
+                System.out.println("Треугольник прмямоугольный");
             }
             else {
-                System.out.println("Треугольниак обычный");
+                if(x==y & x==z){
+                System.out.println("Равносторонний треугольник");
             }
+            else {
+                if ( (x == y & x != z) | (z == x & z !=y) | (z == y & z != x) ){
+                    System.out.println("Треугольник равнобедренный");
+                }
+                else {
+                    System.out.println("Треугольниак обычный");
+                }
+            }
+           }
         }
     }
   private static void task7(){
