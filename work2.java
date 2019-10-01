@@ -79,6 +79,39 @@ public class Runner {
            }
         }
     }
+  
+  private void task6(int number) {
+		int R = 5;
+		int a = 7;
+		int b = 6;
+		int X = 4;
+		int Y = 8;
+		int Z = 2;
+		switch (number) {
+		case 1:
+			if (R < a) {
+				System.out.println("Торт поместится");
+			}
+			else System.out.println("Торт не поместится");
+			break;
+			
+		case 2:
+			if (R < a & R <b) System.out.println("Торт поместится");
+			else System.out.println("Торт не поместится");
+			break;
+			
+		case 3: 
+			if((X < a & Y < b) | (X < b & Y < a ) | (Z < b & Y < a ) | (X < b & Z < a ) | (X < b & Z < a ) | (Y < b & Z < a )) {
+				System.out.println("Торт поместится");
+			}
+			else System.out.println("Торт не поместится");
+			break;
+
+		default:
+			break;
+		}
+		
+	}
   private static void task7(){
         int a = 1;
         int b = 4;
