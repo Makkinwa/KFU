@@ -133,13 +133,16 @@ public class Runner {
         
     }  
 
-  private static void task9(){
-    Scanner sc = new Scanner(System.in);
-    int days = sc.nextInt();
-    int month = sc.nextInt();
-    int year = sc.nextInt();
-    LocalDate now = LocalDate.now();
-    LocalDate born = LocalDate.of(year, month, days);
-    System.out.println(Period.between(now, born).toString());
-  }
+  private static void task9() {
+		int tmp = 0;
+	    int days = 18;
+	    int month = 6;
+	    int year = 2001;
+	    LocalDate now = LocalDate.now();
+	    LocalDate born = LocalDate.of(year, month, days);
+	    int years = Math.abs(Period.between(now, born).getYears());
+	    if (years % 10 == 1) System.out.println("Вам " + years + " год");
+	    if ((tmp = years % 10) == 2 | tmp == 3 | tmp == 4) System.out.println("Вам " + years + " года");
+	    if (years % 10 > 4) System.out.println("Вам " + years + " лет");
+	}
 }
