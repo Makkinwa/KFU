@@ -132,6 +132,14 @@ public class Runner {
         }
         
     }  
+	
+private static void task8() {
+		int mushrooms = 7;
+		int tmp = mushrooms%10;
+		if (tmp == 1) System.out.println("Вася набрал " + tmp + " гриб");
+		if (tmp > 4) System.out.println("Вася набрал " + tmp + " грибов");
+		if (tmp == 2 | tmp == 3 | tmp == 4) System.out.println("Вася набрал " + tmp + " гриба");
+	}
 
   private static void task9() {
 		int tmp = 0;
