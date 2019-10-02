@@ -65,10 +65,27 @@ public class Runner {
 
     private static void task4a(){
         double n = 4.0;
-        double sum = 0;
+        double sum = 0.0;
         while (n != 0) {
             sum = 1/(2*n);
         }
         System.out.println(sum);
+    }
+
+    private static void task4b() {
+
+    }
+
+    private static void task5(){
+        int p = 14;
+        int q = 812;
+        if (p == q){
+            System.out.println(p);
+        }
+        else {
+            if (p>q){
+                
+            }
+        }
     }
 }
