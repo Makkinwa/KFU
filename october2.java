@@ -76,16 +76,57 @@ public class Runner {
 
     }
 
-    private static void task5(){
-        int p = 14;
-        int q = 812;
-        if (p == q){
-            System.out.println(p);
-        }
-        else {
-            if (p>q){
-                
+        private static void task5(){
+        int p = -25;
+        int q = 10;
+        p = Math.abs(p);
+        q = Math.abs(q);
+        while (p != q) {
+            if (p > q) {
+                p = p - q;
+            } else {
+                q = q - p;
             }
+        }
+        System.out.println(p);
+    }
+    
+    private static void task7(){
+        for(int i=0; i<8; i++){
+            System.out.println("");
+            for (int j=0; j<4; j++){
+                if(i%2==0){
+                    System.out.print("X O ");
+                }
+                else {
+                    System.out.print("O X ");
+                }
+            }
+        }
+
+    }   
+    private static void task8(){ 
+        for(int i = 1; i < 11; i++){
+            for (int j = 1;j < 11; j++){
+                System.out.println(i*j);
+            }
+        }
+    }
+    
+    private static void task11(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Сколько чисел ты хочешь?");
+        int n = sc.nextInt();
+        System.out.println("Вводи числа");
+        int past = sc.nextInt();
+        n--;
+        while (n > 0){
+            int tmp = sc.nextInt();
+            if (tmp == past){
+                System.out.println("Есть пара встрчающихся чисел.");
+            }
+            past=tmp;
+            n--;
         }
     }
 }
