@@ -56,7 +56,7 @@ public class Main {
         for (int j=0; j<A.length; j++) {
             int[] arr = A[j];
             for(int i=0; i<arr.length; i++){
-                arr[i] = ran.nextInt();
+                arr[i] = ran.nextInt(30);
                 if (arr[i]<min) {
                     min=arr[i];
                     row=i+1;
@@ -67,5 +67,24 @@ public class Main {
         }
         System.out.println("Самое маленькое число = " + min);
         System.out.println("Оно находится в " + column + " строке и столбце " + row);
+        for (int i=0;  i<A.length; i++){
+            int[] arr = A[i];
+            int tmp = arr[A.length-1];
+            arr[A.length-1]=arr[row];
+            arr[row]=tmp;
+            System.out.println(Arrays.toString(arr));
+        }
+        System.out.println("\n");
+        for(int j=0; j<A.length; j++){
+            int[] arr = A[j];
+            if(j==0){
+
+                for (int i=0; i<arr.length; i++){
+                    arr[i]=min;
+                }
+            }
+            System.out.println(Arrays.toString(arr));
+        }
     }
+
 }
