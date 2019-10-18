@@ -21,6 +21,15 @@ public class Runner {
 		}
 		System.out.println(sum);
 	}
+	
+	private static void task2b() {
+		double sum = 1;
+		int n = 4;
+		int e = 4;
+		while(e>0) {
+			
+		}
+	}
 
     private static void task3(){
         double n = 123;
