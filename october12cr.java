@@ -4,6 +4,23 @@ public class Runner {
     public static void main(String[] args) {
         task5();
     }
+    
+    private static void task2() {
+		int n=4;
+		double sum = 1;
+		while (n > 0) { 
+			int tmp = n;
+			double low = 0;
+			while(tmp>0) {
+				low+=Math.sin(Math.toRadians(n));
+				--tmp;
+			}
+			sum+=1/low;
+			
+		--n;
+		}
+		System.out.println(sum);
+	}
 
     private static void task3(){
         double n = 123;
