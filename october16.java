@@ -86,5 +86,63 @@ public class Main {
             System.out.println(Arrays.toString(arr));
         }
     }
+    private static void task3(){
+        int[][][] arr = new int[3][2][4];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Начало работы.Команды: Ввод, Вывод, Сумма, Массив и Стоп. ");
+        String tmp;
+        arr[1][1][1]=2;
+        arr[2][1][3]=1;
+        arr[2][1][2]=7;
+        arr[0][0][2]=92;
+        int x, y, z;
+        while(true){
+            tmp=sc.next();
+            if (tmp.toLowerCase().equals("ввод")){
+                System.out.println("Введи позицию числа");
+                x = sc.nextInt();
+                y = sc.nextInt();
+                z = sc.nextInt();
+                System.out.println("Запиши число");
+                arr[x][y][z]=sc.nextInt();
+            }
+            if (tmp.toLowerCase().equals("вывод")){
+                System.out.println("Введи позицию числа");
+                x = sc.nextInt();
+                y = sc.nextInt();
+                z = sc.nextInt();
+                System.out.println(arr[x][y][z]);
+            }
+
+            if (tmp.toLowerCase().equals("массив")){
+                for(int[][] bigArr:arr){
+                    for(int[] lilArrr:bigArr){
+                        System.out.println(Arrays.toString(lilArrr));
+                    }
+                    System.out.println('\n');
+                }
+            }
+
+            if (tmp.toLowerCase().equals("сумма")){
+                int sum=0;
+                for(int[][] bigArr:arr){
+                    for(int[] lilArrr:bigArr){
+                        for(int i=0; i < lilArrr.length; i++){
+                            sum+=lilArrr[i];
+                        }
+                    }
+                }
+                System.out.println('\n');
+                System.out.println(sum);
+            }
+
+            if (tmp.toLowerCase().equals("стоп")){
+                break;
+            }
+
+        }
+
+    }
+
 
 }
