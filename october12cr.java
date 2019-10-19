@@ -23,13 +23,17 @@ public class Runner {
 	}
 	
 	private static void task2b() {
-		double sum = 1;
-		int n = 4;
-		int e = 4;
-		while(e>0) {
-			
-		}
-	}
+        double sum = 1;
+        double n = 4.0;
+        double e = 0.00000001;
+        double tmp = 2.0;
+        do {
+            sum+=1/(tmp*tmp*tmp);
+            tmp+=1.0;
+        }
+        while(tmp<4);
+        System.out.println(sum);
+    }
 
     private static void task3(){
         double n = 123;
