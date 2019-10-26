@@ -106,5 +106,45 @@ public class Runner {
             }
         }
     }
+    
+    private static int factorial(int n){
+        if(n>0){
+            return n * factorial(n-1);
+        }
+        return 1;
+    }
+
+    private static int task5(int m, int n){
+        return (factorial(n)*factorial(m))/factorial(n+m);
+    }
+
+
+    private static double task6(double x, int m){
+        double sum=1;
+        while(m > 0){
+            sum*=x;
+            --m;
+        }
+        System.out.println(sum);
+        return sum;
+    }
+
+    private static double f (double x){
+        if(x<3.0 | ((x >= 3.0) & (x < 2*Math.PI))){
+            if (x<3.0){
+                return 7/3;
+            }
+            else {
+                return x*x-3;
+            }
+        }
+        else {
+            return ((1+x*x*x)/(2*x));
+        }
+    }
+    private static double main7(double a, double b){
+        return 12.5 + f(2)-f(4)*f(10)+ f(a)-f(b)+f(a*b);
+    }
+
 
 }
