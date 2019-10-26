@@ -145,6 +145,23 @@ public class Runner {
     private static double main7(double a, double b){
         return 12.5 + f(2)-f(4)*f(10)+ f(a)-f(b)+f(a*b);
     }
-
+    
+    private static int task7b(int x){
+        try{
+            if (x <= 2 | ((x>2) & (x<= 5))){
+                if (x<=2){
+                    return (2*x+(1/(1-x)))/(3*x);
+                }
+                else return 72/7;
+            }
+            else return (-3-x);
+        }
+        catch (ArithmeticException e) {
+            e.printStackTrace();
+            System.out.println("False");
+            System.exit(0);
+        }
+        return -1;
+    }
 
 }
