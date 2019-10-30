@@ -1,10 +1,11 @@
+
 import java.util.Scanner;
 
 public class Runner {
 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        System.out.println(task6(4, 3));
+        System.out.println(task7(2));
     }
 
     private static void task1(int n){
@@ -39,7 +40,14 @@ public class Runner {
         return a + task6(a, --b);
     }
 
-    private static void task7(){
+    private static double task7(int n){
+        if(n>0){
+            return Math.sqrt(2 + task7(--n));
+        }
+        return 0;
+    }
+
+    private static void task7b(){
         
     }
 
