@@ -74,12 +74,14 @@ public class Runner {
 
 
     }
-
     private static void task2b(){
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String first = s.replace("min", "max");
-        s.replace("ku-ku", "");
+        String second = s.replace("ku-ku", "");
+        System.out.println(first);
+        System.out.println(second);
     }
+
 
 }
