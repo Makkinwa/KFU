@@ -83,5 +83,24 @@ public class Runner {
         System.out.println(second);
     }
 
+    
+    private static void Vasya(){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] string = s.split("Вася");
+        System.out.println(string[0]+"Вася");
+    }
+    private static void doppleZahlen() {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        char[] str = s.toCharArray();
+        char[] doubles = new char[s.length()*2];
+        for(int i=0, n=0; i<str.length; i++, n+=2){
+            doubles[n]=str[i];
+            doubles[n+1]=str[i];
+            //System.out.println(doubles);
+        }
+        System.out.println(new String(doubles));
+    }
 
 }
