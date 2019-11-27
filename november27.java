@@ -1,6 +1,9 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class Person {
+public class Runner {
     private String name;
     private String LastName;
     private char sex;
@@ -55,7 +58,7 @@ public class Person {
         return "Runner{" +
                 "name='" + name + '\'' +
                 ", LastName='" + LastName + '\'' +
-                ", Birthdate='" + Birthdate + '\'' +
+                ", date='" + date + '\'' +
                 ", sex=" + sex +
                 '}';
     }
@@ -66,6 +69,15 @@ public class Person {
 
     public static void main(String args[]) {
         System.out.println("Поехали!");
-
+        Scanner sc = new Scanner(System.in);
+        Runner[] arr = new Runner[3];
+        for(int i = 0;i<arr.length;i++){
+            System.out.println("name:");
+            arr[i].name = sc.nextLine();
+            System.out.println("lastname:");
+            
+            System.out.println("date:");
+            System.out.println("sex:");
+        }
     }
 }
