@@ -1,13 +1,12 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Runner {
     private String name;
     private String LastName;
     private char sex;
     private LocalDate date;
+
+    public Runner() {
+    }
 
     public Runner(String name, String lastName, LocalDate date, char sex) {
         this.name = name;
@@ -16,7 +15,7 @@ public class Runner {
         this.sex = sex;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
@@ -67,17 +66,6 @@ public class Runner {
         return LocalDate.now().getYear() - date.getYear();
     }
 
-    public static void main(String args[]) {
-        System.out.println("Поехали!");
-        Scanner sc = new Scanner(System.in);
-        Runner[] arr = new Runner[3];
-        for(int i = 0;i<arr.length;i++){
-            System.out.println("name:");
-            arr[i].name = sc.nextLine();
-            System.out.println("lastname:");
-            
-            System.out.println("date:");
-            System.out.println("sex:");
-        }
-    }
+
 }
+
