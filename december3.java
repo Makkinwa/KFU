@@ -1,30 +1,39 @@
-public class Horse extends Vehicle{
-    private String mast;
-    private int age;
+public class Boot extends Vehicle {
     @Override
     void in() {
 
     }
 
-    @Override
-    void stop() {
-
-    }
-
-    @Override
-    String out() {
-        return null;
-    }
 
     @Override
     void start() {
         if(this.speed==0){
             this.speed=5;
-            System.out.println("igogo");
+            System.out.println("Поплыли");
         }
     }
 
+    @Override
+    void stop() {
+        if(this.speed>0){
+            this.speed=0;
+            System.out.println("Суши весла. Стоим.");
+        }
+    }
+
+    @Override
+    String out() {
+        return "Boot{" +
+                "name='" + name + '\'' +
+                ", speed=" + speed +
+                ", maxSpeed=" + maxSpeed +
+                ", maxAcceleration=" + maxAcceleration +
+                '}';
+    }
+
+
 }
+
 
 
 abstract public class Vehicle {
